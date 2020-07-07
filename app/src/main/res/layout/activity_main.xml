@@ -16,49 +16,61 @@
             android:onClick="setUIFlags"
             android:background="@color/colorAccent"
             android:id="@+id/LAYOUT_STABLE"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
             android:text="LAYOUT_STABLE" />
 
         <Button
             android:onClick="setUIFlags"
             android:background="@color/colorAccent"
             android:id="@+id/LAYOUT_HIDE_NAVIGATION"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
             android:text="LAYOUT_HIDE_NAVIGATION" />
 
         <Button
             android:onClick="setUIFlags"
             android:background="@color/colorAccent"
             android:id="@+id/LAYOUT_FULLSCREEN"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
             android:text="LAYOUT_FULLSCREEN" />
 
         <Button
             android:onClick="setUIFlags"
             android:background="@color/colorAccent"
             android:id="@+id/HIDE_NAVIGATION"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
             android:text="HIDE_NAVIGATION" />
 
         <Button
             android:onClick="setUIFlags"
             android:background="@color/colorAccent"
             android:id="@+id/FULLSCREEN"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
             android:text="FULLSCREEN" />
 
         <Button
             android:onClick="setUIFlags"
             android:background="@color/colorAccent"
             android:id="@+id/IMMERSIVE_STICKY"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
             android:text="IMMERSIVE_STICKY" />
+
+        <TextView
+            android:id="@+id/currentSystemUIVisibilityBinary"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -72,8 +84,9 @@
             android:background="@color/colorPrimaryDark"
             android:textColor="#FFFFFF"
             android:id="@+id/LAYOUT_STABLE_OFF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
             android:text="LAYOUT_STABLE" />
 
         <Button
@@ -81,8 +94,9 @@
             android:background="@color/colorPrimaryDark"
             android:textColor="#FFFFFF"
             android:id="@+id/LAYOUT_HIDE_NAVIGATION_OFF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
             android:text="LAYOUT_HIDE_NAVIGATION" />
 
         <Button
@@ -90,8 +104,9 @@
             android:background="@color/colorPrimaryDark"
             android:textColor="#FFFFFF"
             android:id="@+id/LAYOUT_FULLSCREEN_OFF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
             android:text="LAYOUT_FULLSCREEN" />
 
         <Button
@@ -99,8 +114,9 @@
             android:background="@color/colorPrimaryDark"
             android:textColor="#FFFFFF"
             android:id="@+id/HIDE_NAVIGATION_OFF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
             android:text="HIDE_NAVIGATION" />
 
         <Button
@@ -108,8 +124,9 @@
             android:background="@color/colorPrimaryDark"
             android:textColor="#FFFFFF"
             android:id="@+id/FULLSCREEN_OFF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
             android:text="FULLSCREEN" />
 
         <Button
@@ -117,9 +134,83 @@
             android:background="@color/colorPrimaryDark"
             android:textColor="#FFFFFF"
             android:id="@+id/IMMERSIVE_STICKY_OFF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
             android:text="IMMERSIVE_STICKY" />
+
+        <TextView
+            android:id="@+id/currentSystemUIVisibility"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
     </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:onClick="setUIFlags"
+            android:id="@+id/LAYOUT_STABLE_STATUS"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:onClick="setUIFlags"
+            android:id="@+id/LAYOUT_HIDE_NAVIGATION_STATUS"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:onClick="setUIFlags"
+            android:id="@+id/LAYOUT_FULLSCREEN_STATUS"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:onClick="setUIFlags"
+            android:id="@+id/HIDE_NAVIGATION_STATUS"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:onClick="setUIFlags"
+            android:id="@+id/FULLSCREEN_STATUS"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:onClick="setUIFlags"
+            android:id="@+id/IMMERSIVE_STICKY_STATUS"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+    </LinearLayout>
+
 
 </LinearLayout>
